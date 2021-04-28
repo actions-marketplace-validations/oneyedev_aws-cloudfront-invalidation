@@ -1,0 +1,16 @@
+name: 'AWS Cloudfront Invalidation'
+description: 'Request Invalidation to AWS Cloudfront'
+branding:
+  icon: refresh-ccw
+  color: green
+inputs:
+  distribution-id:
+    description: 'AWS Cloudfront Distribution Id to Invalidation'
+    required: true
+  paths:
+    description: 'Invalidation Object Paths which is seperated with linebreak(\n)'
+    required: false
+    default: '*'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
