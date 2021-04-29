@@ -19,3 +19,16 @@ Request Invalidation to AWS Cloudfront in a Github action flow
       images*
       sounds/drum.mp3
 ```
+
+## Inputs
+
+```yaml
+inputs:
+  distribution-id:
+    description: 'AWS Cloudfront Distribution Id to Invalidation'
+    required: true
+  paths:
+    description: 'Invalidation Object Paths which is seperated with linebreak(\n)'
+    required: false
+    default: '*'
+```
